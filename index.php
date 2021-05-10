@@ -6,6 +6,12 @@ class Movie {
     public $rating;
     public $review = "undefined";
 
+    function __construct($_title, $_rating)
+    {
+        $this->title = $_title;
+        $this->rating = $_rating;
+    }
+
     public function getReview()
     {
         if ($this->rating >= 4.5) {
@@ -25,25 +31,25 @@ class Movie {
 }
 
 
-$blues = new Movie();
-$brave = new Movie();
-$dolittle = new Movie();
+$blues = new Movie("The Blues Brothers", 4.8);
+$brave = new Movie("Braveheart", 4.2);
+$dolittle = new Movie("Dolittle", 2.2);
 
-$blues->title = "The Blues Brothers";
+/* $blues->title = "The Blues Brothers"; */
 $blues->actor = "John Belushi";
-$blues->rating = 4.8;
+/* $blues->rating = 4.8; */
 $blues->getReview();
 var_dump($blues);
 
-$brave->title = "Braveheart";
+/* $brave->title = "Braveheart"; */
 $brave->actor = "Mel Gibson";
-$brave->rating = 4.2;
+/* $brave->rating = 4.2; */
 $brave->getReview();
 var_dump($brave);
 
-$dolittle->title = "Dolittle";
+/* $dolittle->title = "Dolittle"; */
 $dolittle->actor = "Robert Downing Jr";
-$dolittle->rating = 2.2;
+/* $dolittle->rating = 2.2; */
 $dolittle->getReview();
 var_dump($dolittle);
 
